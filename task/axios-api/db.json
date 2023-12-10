@@ -1,0 +1,83 @@
+{
+  "posts": [
+    {
+      "title": "Made In India",
+      "author": "\tAmitabh Kant",
+      "id": 7
+    },
+    {
+      "title": "Cyber Encounters",
+      "author": "Ashok Kumar and OP Manocha",
+      "id": 8
+    },
+    {
+      "title": "My Life as a Comrade",
+      "author": "K.K. Shailaja",
+      "id": 9
+    },
+    {
+      "title": "The Book of Bihari Literaturee",
+      "author": "\tAbhay Kk",
+      "id": 10
+    },
+    {
+      "title": "The Book of Bihari Literature",
+      "author": "\tAbhay K",
+      "id": 11
+    },
+    {
+      "title": "Accusantium mollitia",
+      "author": "In non tempora nisi ",
+      "id": 12
+    },
+    {
+      "title": "Ut quo explicabo Te",
+      "author": "Adipisicing ipsum m",
+      "id": 13
+    },
+    {
+      "title": "Laboris architecto c",
+      "author": "Blanditiis et esse ",
+      "id": 14
+    },
+    {
+      "title": "Omnis corrupti magn",
+      "author": "Voluptatibus quis un",
+      "id": 15
+    },
+    {
+      "title": "Sit velit autem quo",
+      "author": "Voluptas est beatae ",
+      "id": 16
+    },
+    {
+      "title": "Omnis amet providen",
+      "author": "Tenetur voluptatem ",
+      "id": 17
+    },
+    {
+      "title": "Sunt amet quia eni",
+      "author": "Tenetur ut aliquid e",
+      "id": 18
+    },
+    {
+      "title": "Non veniam corrupti",
+      "author": "Est adipisicing dolo",
+      "id": 20
+    },
+    {
+      "title": "Dolorum ullam incidu",
+      "author": "Laudantium possimus",
+      "id": 21
+    },
+    {
+      "title": "Ea quo fuga Aliqua",
+      "author": "Sunt nostrud incidu",
+      "id": 22
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
