@@ -1,13 +1,13 @@
 
 import './App.css';
 import Apidata from './Components/Apidata';
-import Form from './Components/Form/Form';
+import Inputform from './Components/Form/Inputform';
 
 function App() {
   return (
     <div className="App">
-      <Apidata/>
-      {/* <Form/> */}
+      {/* <Apidata/> */}
+      <Inputform/>
     </div>
   );
 }
