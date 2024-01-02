@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "productName": "watch",
+      "price": "200"
+    },
+    {
+      "productName": "mobile",
+      "price": "200000",
+      "id": 2
+    },
+    {
+      "productName": "ring",
+      "price": "1000",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
