@@ -6,6 +6,7 @@ import {
   PUT_PRODUCT_PROGRESS,
 } from "../redux-saga/admin/action/action";
 import Swal from "sweetalert2";
+import { Box, Button, TextField, Typography } from "@mui/material";
 
 const Data = () => {
   const name = useRef();
@@ -24,20 +25,42 @@ const Data = () => {
       price: price.current.value,
     };
     Swal.fire({
-      title: "Added.....!",
-      text: "Your Product add successfuly!",
+      position: "top-end",
       icon: "success",
+      title: "Your Product add successfuly!",
+      showConfirmButton: false,
+      timer: 1500,
     });
 
     dispatch({ type: POST_PRODUCT_PROGRESS, payload: data });
-
     console.log(data);
+    name.current.value = "";
+    price.current.value = "";
   };
   /* ----------------------------- delete product ----------------------------- */
   const handalDelete = (val) => {
     dispatch({
       type: DELETE_PRODUCT_PROGRESS,
       payload: val,
+    });
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your Product delete successfully!",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+      }
     });
   };
   /* ----------------------------- update product ----------------------------- */
@@ -52,47 +75,77 @@ const Data = () => {
       text: "You clicked the button!",
       icon: "success",
     });
+    name.current.value = "";
+    price.current.value = "";
   };
 
   return (
-    <div>
-      <label>ProductName:~</label>
-      <input type="text" ref={name} />
-      <label>Price:~</label>
-      <input type="number" ref={price} />
-      <button onClick={handleSubmit}>Add</button>
-      <br />
-      <input
-        type="text"
-        name="productName"
-        value={view.productName}
-        onChange={handal}
-      ></input>
-      <input
-        type="text"
-        name="price"
-        value={view.price}
-        onChange={handal}
-      ></input>
-      <button onClick={handalUpdate}>Update</button>
+    <>
+      <Box m="2.5rem 30rem" border=".1rem solid" borderRadius="1rem">
+        <Box m="1rem">
+          <Typography variant="h6" textAlign="center" marginBottom="1rem">
+            Product List
+          </Typography>
+
+          <TextField
+            required
+            placeholder="Enter your Product Name"
+            label="Product Name"
+            name="productName"
+            variant="outlined"
+            inputRef={name}
+            value={view.productName || ""}
+            onChange={handal}
+            sx={{ marginRight: 4 }}
+          />
+          <TextField
+            placeholder="Enter your Product Price"
+            label="Product Price"
+            name="price"
+            required
+            variant="outlined"
+            inputRef={price}
+            value={view.price || ""}
+            onChange={handal}
+          />
+        </Box>
+        <Box textAlign="center" mb="2rem">
+          <Button variant="contained" onClick={handleSubmit}>
+            Submit
+          </Button>
+          <Button
+            variant="contained"
+            style={{ margin: "1rem" }}
+            onClick={handalUpdate}
+          >
+            update
+          </Button>
+        </Box>
+      </Box>
 
       <div className="row">
-        {product.product?.map((val, ind) => {
-          return (
-            <div className="col-4" key={ind}>
-              <div className="card mt-3" style={{ width: "18rem" }}>
-                <div className="card-body">
-                  <h5 className="card-title">{val.productName}</h5>
-                  <p className="card-text">{val.price}</p>
-                  <button onClick={() => handalDelete(val)}>Delete</button>
-                  <button onClick={() => setview(val)}>View</button>
-                </div>
+        {product.product?.map((val, ind) => (
+          <div className="col-4" key={ind}>
+            <div className="card mt-3" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <h5 className="card-title">{val.productName}</h5>
+                <p className="card-text">{val.price}</p>
+                <Button variant="contained" onClick={() => handalDelete(val)}>
+                  Delete
+                </Button>
+                <Button
+                  variant="contained"
+                  style={{ margin: "1rem" }}
+                  onClick={() => setview(val, ind)}
+                >
+                  Update
+                </Button>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
-    </div>
+    </>
   );
 };
 
