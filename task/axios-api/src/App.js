@@ -6,8 +6,8 @@ import Inputform from './Components/Form/Inputform';
 function App() {
   return (
     <div className="App">
-      {/* <Apidata/> */}
-      <Inputform/>
+      <Apidata/>
+      {/* <Inputform/> */}
     </div>
   );
 }

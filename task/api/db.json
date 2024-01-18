@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "fname": "freni",
+      "lname": "vaghasiyaa",
+      "age": "12",
+      "id": 26
+    },
+    {
+      "fname": "grecy",
+      "lname": "vaghasiya",
+      "age": "12",
+      "id": 27
+    },
+    {
+      "fname": "grecy",
+      "lname": "vaghasiya",
+      "age": "12",
+      "id": 28
+    },
+    {
+      "fname": "freni",
+      "lname": "vaghasiya",
+      "age": "12",
+      "id": 29
+    },
+    {
+      "fname": "freni",
+      "lname": "vaghasiya",
+      "age": "21",
+      "id": 30
+    },
+    {
+      "fname": "himali",
+      "lname": "patel",
+      "age": "24",
+      "id": 31
+    },
+    {
+      "fname": "",
+      "lname": "",
+      "age": "",
+      "id": 32
+    },
+    {
+      "fname": "fku.",
+      "lname": "erer",
+      "age": "32",
+      "id": 33
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

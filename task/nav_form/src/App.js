@@ -11,7 +11,6 @@ import Result from "./Componets/Result";
 
 
 function App() {
-  
   return (
     <div className="App">
       <Navbar />
